@@ -54,7 +54,7 @@ curl -X POST  http://localhost:8080/publish/demo2
 The first command invokes the first publisher that publishes the topic `spring-kafka-app1-demo1` and the second for the topic `spring-kafka-app1-demo2`.
 Listeners log the data received on the console with the key, partition, and offset received.
 
-=== https://github.com/schacko-samples/s1-2023-kafka-stack-demo/blob/main/spring-kafka-app2/src/main/java/app2/SpringKafkaApp2.java[spring-kafka-app2 - JsonSerializer and JsonDeserializer in action]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app2/src/main/java/app2/SpringKafkaApp2.java[spring-kafka-app2 - JsonSerializer and JsonDeserializer in action]
 
 In this app, we use a POJO to publish and consume the `JsonSerializer` and `JsonDeserializer` from Spring for Apache Kafka.
 
@@ -63,7 +63,7 @@ It publishes a domain object `Foo` into the topic and then consumes it using a `
 
 Look at the `application.properties` configuration file to see how the serializer/deserializer properties are configured.
 
-=== https://github.com/schacko-samples/s1-2023-kafka-stack-demo/blob/main/spring-kafka-app3/src/main/java/app3/SpringKafkaApp3.java[spring-kafka-app3 - Seeking to specific offsets]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app3/src/main/java/app3/SpringKafkaApp3.java[spring-kafka-app3 - Seeking to specific offsets]
 
 In this application, we have a publisher and a listener.
 The listener extends from `AbstractConsumerSeekAware,` which implements `ConsumerSeekAware.`
