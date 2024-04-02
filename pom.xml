@@ -16,5 +16,6 @@
         <module>spring-kafka-app1</module>
         <module>spring-kafka-app2</module>
         <module>spring-kafka-app3</module>
+        <module>spring-kafka-app4</module>
     </modules>
 </project>

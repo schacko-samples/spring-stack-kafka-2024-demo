@@ -72,7 +72,7 @@ The application creates a topic named `spring-kafka-app3-demo` with a single par
 We always seek the partition to offset 20 each time the listener starts.
 The publisher sends 100 records each time when the app starts.
 
-=== https://github.com/schacko-samples/s1-2023-kafka-stack-demo/blob/main/spring-kafka-app4/src/main/java/app4/SpringKafkaApp4.java[spring-kafka-app4 - Error Handling]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app4/src/main/java/app4/SpringKafkaApp4.java[spring-kafka-app4 - Error Handling]
 
 This application demonstrates how container error handling works in Spring for Apache Kafka.
 The application has a publisher, which is invoked through a REST endpoint.
@@ -81,9 +81,9 @@ Each time the REST endpoint is called, the publisher sends ten records to the to
 On the consumer side, we have a contrived logic for throwing an exception each time the offset is > 0 and divisible by 10.
 By default, when the exception happens, the `DefaultErrorHandler` will kick in with ten maximum tries without any backoff.
 However, we provide a custom bean declaration for `DefaultErrorHandler,` which the boot autoconfiguration picks up and configure with the container factory.
-This custom handler will re-try for a maximum of 3 times with a two seconds backoff each time.
+This custom handler will re-try for a maximum of 3 times with two seconds of backoff each time.
 The handler also is configured with a `DeadLetterPublishingRecoverer`, which sends the record in error to a default DLT topic.
-Next time the app runs, you will notice that the first record (with `offset % 10 == 0`) tries to recover three times and then is sent to the DLT.
+When the app runs, you will notice that the record with `offset % 9 == 0` condition fails, and then tries to retry three times and then is recovered by sending it to the DLT.
 There is also a convenient `KafkaListener` method for DLT where it logs the DLT messages.
 
 To exercise the app, run it first and then issue the following CURL command.
