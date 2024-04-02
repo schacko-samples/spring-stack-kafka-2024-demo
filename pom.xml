@@ -19,6 +19,8 @@
         <module>spring-kafka-app4</module>
         <module>spring-kafka-app5</module>
         <module>spring-kafka-app6</module>
+        <module>spring-kafka-app7</module>
+        <module>spring-kafka-app8</module>
         <module>spring-integration-kafka-app</module>
         <module>spring-cloud-stream-app1</module>
         <module>spring-cloud-stream-app2</module>

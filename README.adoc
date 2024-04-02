@@ -114,6 +114,27 @@ To run the app, start `SpringKafkaApp6`.
 
 On the console, you should see the record delivery attempts with "one" being retried after 2 seconds, then 3, then 4.5, then 6.75, then to the DLT.
 
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app7/src/main/java/app7/SpringKafkaApp7.java[spring-kafka-app7 - Batch Listener, Manual Acknowledging]
+
+This application demonstrates batch listeners and manual acknowledgement.
+
+To run the app, start `SpringKafkaApp7`.
+
+Listener prints out the number of records in the batch received.
+In addition, for education purposes, we also show how to manually acknowledge each record in the batch.
+
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app8/src/main/java/app8/SpringKafkaApp8.java[spring-kafka-app8 - Spring Kafka Observability]
+
+This application demonstrates observability with zipkin.
+
+First, make sure that you run zipkin server using one of the methods described https://zipkin.io/pages/quickstart.html[here].
+
+Here is how start it using Docker compose: `docker run -d -p 9411:9411 openzipkin/zipkin`.
+
+Then run the app by starting `SpringKafkaApp8`.
+
+Go to the zipkin UI (default: `localhost:9411`) and observe the traces and spans.
+
 === https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-integration-kafka-app/src/main/java/integration/SpringIntegrationKafkaApp.java[spring-integration-kafka-app - Spring Integration Kafka Outbound Channel Adapter and Message Driven Channel Adapter Demo]
 
 This is an application in which we demonstrate the usage of Spring Integration Kafka support.
