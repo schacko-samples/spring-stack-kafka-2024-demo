@@ -92,7 +92,7 @@ To exercise the app, run it first and then issue the following CURL command.
 curl -X POST  http://localhost:8080/publish/demo
 ```
 
-=== https://github.com/schacko-samples/s1-2023-kafka-stack-demo/blob/main/spring-kafka-app5/src/main/java/app5/SpringKafkaApp5.java[spring-kafka-app5 - ErrorHandlingDeserializer]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app5/src/main/java/app5/SpringKafkaApp5.java[spring-kafka-app5 - ErrorHandlingDeserializer]
 
 This application demonstrates the `ErrorHandlingDeserializer` in action.
 We have a publisher that sends data as `String,` but the consumer expects an `Integer,` thus it causes a deserialization error.
