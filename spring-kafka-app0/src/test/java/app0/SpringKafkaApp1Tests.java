@@ -1,12 +1,12 @@
 package app0;
 
-import java.util.Map;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+import java.util.Map;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.junit.jupiter.api.Test;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
@@ -14,10 +14,8 @@ import org.springframework.kafka.test.EmbeddedKafkaBroker;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 @SpringBootTest
-@EmbeddedKafka(topics = "spring-kafka-app0-demo1", bootstrapServersProperty = "spring.kafka.bootstrap-servers")
+@EmbeddedKafka(topics = "spring-kafka-app0-demo1")
 class SpringKafkaApp0Tests {
 
 	@Autowired
