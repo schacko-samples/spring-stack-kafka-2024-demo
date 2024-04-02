@@ -196,7 +196,7 @@ curl localhost:8080/actuator/kafkastreamstopology/updates-applicationId
 
 Popular UI tool for visualizing the topology: https://zz85.github.io/kafka-streams-viz/
 
-=== https://github.com/schacko-samples/s1-2023-kafka-stack-demo/blob/main/spring-cloud-stream-app4/user-clicks-per-region/src/main/java/scst/app4/SpringCloudStreamApp4Application.java[spring-cloud-stream-app4 - Spring Cloud Stream Kafka Streams Advanced]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-cloud-stream-app4/user-clicks-per-region/src/main/java/scst/app4/SpringCloudStreamApp4Application.java[spring-cloud-stream-app4 - Spring Cloud Stream Kafka Streams Advanced]
 
 This advanced sample of a Spring Cloud Stream processor using Kafka Streams support shows both KStream and KTable bindings.
 
