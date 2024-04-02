@@ -103,7 +103,7 @@ Since deserialization exceptions are not retried by default, the `DefaultErrorHa
 We configure the error handler with a `DeadLetterPublishingRecoverer` for the records in error to be sent.
 The application provides a convenient `KafkaListener` to consume from the DLT topic (`spring-kafka-app5-demo.DLT`).
 
-=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app6/src/main/java/app6/SpringKafkaApp6.java[spring-kafka-app7 - Non-blocking Retries]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app6/src/main/java/app6/SpringKafkaApp6.java[spring-kafka-app6 - Non-blocking Retries]
 
 In this application, we see how non-blocking retries work.
 Two records are sent, with values "one" and "two"; the listener throws an exception when it receives "one."
