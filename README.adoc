@@ -18,7 +18,7 @@ For convenience, we provide a docker-compose script that allows you to run a thr
 This repository contains several standalone Spring Boot applications for demonstrating various features mentioned during the talk.
 You can just navigate to the README on each application for more details.
 
-=== https://github.com/schacko-samples/s1-2023-kafka-stack-demo/blob/main/spring-kafka-app0/src/main/java/app0/SpringKafkaApp0.java[spring-kafka-app0 - Basic Application to Publish and Consume Text Based Records]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app0/src/main/java/app0/SpringKafkaApp0.java[spring-kafka-app0 - Basic Application to Publish and Consume Text Based Records]
 
 This application creates a Kafka topic named `spring-kafka-app0-demo1` with a single partition.
 Then it publishes random text data to this topic using `KafkaTemplate` and consumes them using a `KafkaListener.`
@@ -31,7 +31,7 @@ The listener consumes the records and prints them on the console.
 
 This application also includes a basic JUnit 5-based test using EmbeddedKafkaBroker.
 
-=== https://github.com/schacko-samples/s1-2023-kafka-stack-demo/blob/main/spring-kafka-app1/src/main/java/app1/SpringKafkaApp1.java[spring-kafka-app1 - Advanced application with two publishers and listeners with initial assignment]
+=== https://github.com/schacko-samples/spring-stack-kafka-2024-demo/blob/main/spring-kafka-app1/src/main/java/app1/SpringKafkaApp1.java[spring-kafka-app1 - Advanced application with two publishers and listeners with initial assignment]
 
 We have two publishers in this application, both using custom `KafkaTemplate` beans.
 One `KafkaTemplate` uses `Long` as the key type, the other uses `UUID,` while both use `String` as the value type.

@@ -13,5 +13,6 @@
     </properties>
     <modules>
         <module>spring-kafka-app0</module>
+        <module>spring-kafka-app1</module>
     </modules>
 </project>
