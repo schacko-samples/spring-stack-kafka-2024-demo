@@ -1,0 +1,37 @@
+spring.cloud:
+  function.definition: provideWords;countWords;logWordCount
+  stream:
+    bindings:
+      provideWords-out-0:
+        destination: words
+      countWords-in-0:
+        destination: words
+      countWords-out-0:
+        destination: counts
+      logWordCount-in-0:
+        destination: counts
+
+    kafka:
+      streams:
+        binder:
+          configuration:
+            commit.interval.ms: 100
+            default:
+              key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+              value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+#Enable metrics
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: metrics,health
+
+logging:
+  pattern:
+    console: "%d [%t] %m%n"
+#  level:
+#    root: off
+#    scst.app3: info

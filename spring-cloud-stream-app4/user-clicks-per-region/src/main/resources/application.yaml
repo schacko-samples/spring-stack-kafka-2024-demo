@@ -1,0 +1,33 @@
+spring.cloud:
+  function:
+    definition:  clicks;updates
+  stream.bindings:
+    clicks-in-0:
+      destination: user-clicks
+    clicks-in-1:
+      destination: user-regions
+    clicks-out-0:
+      destination: clicks-per-region
+    updates-in-0:
+      destination: clicks-per-region
+spring.cloud.stream.kafka.streams.binder:
+  configuration:
+    default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    commit.interval.ms: 1000
+
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: metrics,health,bindings,kafkastreamstopology
+
+logging:
+  pattern:
+    console: "%d [%t] %m%n"
+  level:
+    root: off
+    scst.app4: info
